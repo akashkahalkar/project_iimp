@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/fl_tv_mainchoice"
+                android:padding="@dimen/btn_padding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Make a Choice."
+                android:textSize="@dimen/front_login_text_size" />
+
+            <Button
+                android:id="@+id/fl_btn_existing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/btn_padding"
+                android:text="Existing User"
+                android:textSize="@dimen/btn_text_size" />
+
+            <Button
+                android:id="@+id/fl_btn_newuser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/btn_padding"
+                android:text="New User"
+                android:textSize="@dimen/btn_text_size" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trail"
+                android:id="@+id/fl_btn_trail"
+                android:layout_gravity="center"
+                android:padding="@dimen/btn_padding"
+                android:textSize="@dimen/btn_text_size"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

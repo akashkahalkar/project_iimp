@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">IIMP</string>
+
+    <string name="id">"ID : "</string>
+    <string name="first_name">"First Name : "</string>
+    <string name="last_name">"Last Name : "</string>
+    <string name="emailid">"E-Mail ID : "</string>
+    <string name="mobileno">"Mobile No. : "</string>
+    <string name="dob">"Date Of Birth : "</string>
+    <string name="gender">"Gender : "</string>
+    <string name="designation">"Designation : "</string>
+    <string name="doj">"Date Of Join : "</string>
+
+    <string name="btn_search_members">Search Members</string>
+    <string name="btn_user_name">User Profile</string>
+    <string name="btn_fetch_profile">Fetch Profile</string>
+    <string name="btn_search">Search</string>
+
+</resources>

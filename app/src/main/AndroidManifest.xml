@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.liveproject.persi.ycce.iimp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////
+        <activity
+            android:name=".Activity_Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        /////////////////////////////////////////////////////////////////////////////////////////
+
+
+        <activity
+            android:name=".Activity_FrontLogin"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.liveproject.persi.ycce.iimp.FRONT_LOGIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Activity_NewRegistration"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.liveproject.persi.ycce.iimp.NEW_REGISTRATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_FrontLogin" />
+        </activity>
+
+
+        <activity
+            android:name=".Activity_NewRegistration_Trail"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.liveproject.persi.ycce.iimp.NEW_REGISTRATION_TRAIL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_FrontLogin" />
+        </activity>
+
+        <activity
+            android:name=".Activity_Validate_EU"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.liveproject.persi.ycce.iimp.EX_LOGIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_FrontLogin" />
+        </activity>
+
+        <activity
+            android:name=".Activity_Validate_NR"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.liveproject.persi.ycce.iimp.NR_LOGIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_FrontLogin" />
+        </activity>
+
+
+        <activity android:name=".Activity_OTP_Verification"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.liveproject.persi.ycce.iimp.OTP_VERIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".Activity_OTP_Verification_NR"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.liveproject.persi.ycce.iimp.OTP_VERIFICATION_NR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Activity_HomePage"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.liveproject.persi.ycce.iimp.HOME_PAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".Activity_UserProfile"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.liveproject.persi.ycce.iimp.USER_PROFILE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_HomePage" />
+        </activity>
+
+
+        <activity
+            android:name=".Activity_SearchMembers"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.liveproject.persi.ycce.iimp.SEARCH_MEMBER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_HomePage" />
+        </activity>
+
+
+        <activity
+            android:name=".Activity_EditProfile"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.liveproject.persi.ycce.iimp.EDIT_PROFILE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_UserProfile" />
+        </activity>
+
+
+        <activity
+            android:name=".Activity_FetchProfile"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.liveproject.persi.ycce.iimp.FETCH_PROFILE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_HomePage" />
+        </activity>
+    </application>
+
+</manifest>

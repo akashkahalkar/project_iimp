@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_HomePage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="50">
+
+            <Button
+                android:id="@+id/btn_userprofile"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:clickable="true"
+                android:padding="20dp"
+                android:text="@string/btn_user_name"
+                android:textSize="@dimen/btn_text_size" />
+
+            <Button
+                android:id="@+id/btn_fetchprofile"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:clickable="true"
+                android:padding="20dp"
+                android:text="@string/btn_fetch_profile"
+                android:textSize="@dimen/btn_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50">
+
+            <Button
+                android:id="@+id/btn_searchmember"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:clickable="true"
+                android:padding="20dp"
+                android:text="@string/btn_search_members"
+                android:textSize="@dimen/btn_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

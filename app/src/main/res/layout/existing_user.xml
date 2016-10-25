@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/activity_layout_margin">
+
+        <TextView
+            android:id="@+id/eu_tv_timepass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your registered number : "
+            android:textSize="@dimen/existing_user_text_size" />
+
+        <EditText
+            android:id="@+id/eu_et_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone" />
+
+        <Button
+            android:id="@+id/eu_btn_existing_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Number"
+            android:textSize="@dimen/btn_text_size"
+            android:padding="@dimen/btn_padding"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

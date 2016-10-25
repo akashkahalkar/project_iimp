@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/activity_vertical_margin"
+    android:layout_marginRight="@dimen/activity_vertical_margin"
+    android:layout_marginTop="@dimen/activity_top_margin"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/id"
+            android:textSize="@dimen/search_member_text_size" />
+
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_name"
+            android:textSize="@dimen/search_member_text_size" />
+
+        <EditText
+            android:id="@+id/et_username"
+            android:inputType="textPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_mobileno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mobileno"
+            android:textSize="@dimen/search_member_text_size" />
+
+        <EditText
+            android:id="@+id/et_mobileno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/tv_emailid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/emailid"
+            android:textSize="@dimen/search_member_text_size" />
+
+        <EditText
+            android:id="@+id/et_emailid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/tv_designation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/designation"
+            android:textSize="@dimen/search_member_text_size" />
+
+        <Spinner
+            android:id="@+id/dd_designation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown" />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="22dp"
+            android:text="@string/btn_search"
+            android:textSize="22.5sp" />
+
+        <TextView
+            android:id="@+id/tv_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/search_member_text_size"
+            android:visibility="invisible" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/sm_et_searchlist"
+            android:editable="true"
+            android:focusable="false"
+            android:enabled="true"
+            android:scrollbars="vertical"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+</ScrollView>
