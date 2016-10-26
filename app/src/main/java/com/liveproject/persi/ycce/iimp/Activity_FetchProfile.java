@@ -1,7 +1,5 @@
 package com.liveproject.persi.ycce.iimp;
 
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -13,27 +11,17 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 
 import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 /**
  * Created by Tiger on 28-08-2016.
  */
 public class Activity_FetchProfile extends AppCompatActivity {
-    JSONService jser = new JSONService();
+    //String made just to get rid of errors
+    String sender=null;
+    JSONService jser = new JSONService(sender);
     JSONArray jarray = new JSONArray();
     Member m = new Member();
     MemberService ms = new MemberService();

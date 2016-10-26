@@ -317,13 +317,15 @@ public class DatabaseService {
         String ids,names;
         GroupClass[] result;
         final SQLiteDatabase db =open();
-        Cursor cursor =db.rawQuery("select " + GROUP_NAME + " from "+ TABLE_GROUP + " where " + GROUP_ID +
-                " = ( select " + GROUPMAP_GID  + " from " + TABLE_GROUPMAP + " where " + GROUPMAP_GID +
-                " = ( select " + USERPROFILE_ID +  " from " + TABLE_USERPROFILE + " where " + USERPROFILE_MOBILE_NO + " = ?));",
-                new String[]{Mob_no});
+        Cursor cursor=db.rawQuery("select gid,gname from groups;",new String[]{});
+        //Cursor cursor =db.rawQuery("select " + GROUP_ID + " , " + GROUP_NAME + " from "+ TABLE_GROUP + " where " + GROUP_ID +
+         //       " = ( select " + GROUPMAP_GID  + " from " + TABLE_GROUPMAP + " where " + GROUPMAP_UPID +
+         //       " = ( select " + USERPROFILE_ID +  " from " + TABLE_USERPROFILE + " where " + USERPROFILE_MOBILE_NO + " = ?));",
+         //       new String[]{Mob_no});
         int length = cursor.getCount();
 
         result = new GroupClass[length];
+        if(cursor!=null)
         cursor.moveToFirst();
 
         for(int i=0;i<length;i++)

@@ -33,6 +33,8 @@ public class Activity_MyGroups extends AppCompatActivity {
             s[i] = gc[i].getGName();
         }
 
+        //Toast.makeText(Activity_MyGroups.this, s[0], Toast.LENGTH_LONG).show();
+
         lv = (ListView) findViewById(R.id.lv_my_groups);
 
 
