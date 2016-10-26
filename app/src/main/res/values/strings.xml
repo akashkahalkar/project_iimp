@@ -15,5 +15,6 @@
     <string name="btn_user_name">User Profile</string>
     <string name="btn_fetch_profile">Fetch Profile</string>
     <string name="btn_search">Search</string>
+    <string name="btn_my_groups">My Groups</string>
 
 </resources>

@@ -39,6 +39,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="50">
@@ -51,6 +52,16 @@
                 android:padding="20dp"
                 android:text="@string/btn_search_members"
                 android:textSize="@dimen/btn_text_size" />
+
+            <Button
+                android:id="@+id/btn_mygroups"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:clickable="true"
+                android:padding="20dp"
+                android:text="@string/btn_my_groups"
+                android:textSize="@dimen/btn_text_size" />
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

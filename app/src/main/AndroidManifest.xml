@@ -176,6 +176,33 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activity_HomePage" />
         </activity>
+
+        <activity
+            android:name=".Activity_MyGroups"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.liveproject.persi.ycce.iimp.MY_GROUPS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_HomePage" />
+        </activity>
+
+        <activity
+            android:name=".Activity_GroupMembers"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.liveproject.persi.ycce.iimp.GROUP_MEMBERS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity_MyGroups" />
+        </activity>
+
     </application>
 
 </manifest>

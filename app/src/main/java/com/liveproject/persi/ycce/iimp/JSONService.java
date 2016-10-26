@@ -1,95 +1,61 @@
 package com.liveproject.persi.ycce.iimp;
 
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
-
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
-
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 /**
  * Created by Tiger on 28-08-2016.
  */
 public class JSONService {
 
+    public static String[] ids;
+    public static String[] names;
+    public static String[] emails;
 
+    public static final String JSON_ARRAY = "attributes";
+    public static final String KEY_ID = "Id";
+    public static final String KEY_NAME = "FirstName";
+    public static final String KEY_EMAIL = "Email";
 
-    // Call execute asynctask function in member fuction
+    private JSONArray users = null;
 
-        public JSONArray getJSON(String... params) {
+    private String json;
 
-
-
-//Using AsyncTask:
-
-
-            HttpURLConnection connection = null;
-            BufferedReader reader = null;
-
-            try {
-                URL url = new URL(params[0]);
-                connection = (HttpURLConnection) url.openConnection();
-                connection.connect();
-
-
-                InputStream stream = connection.getInputStream();
-
-                reader = new BufferedReader(new InputStreamReader(stream));
-
-                StringBuffer buffer = new StringBuffer();
-                String line = "";
-
-                while ((line = reader.readLine()) != null) {
-                    buffer.append(line + "\n");
-                    // The response is in line or buffer.
-
-                }
-                try {
-                    JSONArray jsonarray = new JSONArray(buffer.toString());
-
-                    return jsonarray;
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                if (connection != null) {
-                    connection.disconnect();
-                }
-                try {
-                    if (reader != null) {
-                        reader.close();
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-             return null;
-
-        }
-
-
-
-
-
-
+    public JSONService(String json) {
+        this.json = json;
     }
 
+    protected void parseJSON() {
+        JSONObject jsonObject = null;
+        JSONArray jarray = null;
+        try {
+            //  jsonObject = new JSONObject(json);
+            //  users = jsonObject.getJSONArray(JSON_ARRAY);
 
+            jarray = new JSONArray(json);
 
+            ids = new String[jarray.length()];
+            names = new String[jarray.length()];
+            emails = new String[jarray.length()];
+
+            for (int j = 0; j < jarray.length(); j++) {
+
+                JSONObject jo = jarray.getJSONObject(j);
+                ids[j] = jo.getString(KEY_ID);
+                names[j] = jo.getString(KEY_NAME);
+                emails[j] = jo.getString(KEY_EMAIL);
+            }
+
+            /*for(int i=0;i<users.length();i++){
+                JSONObject jo = users.getJSONObject(i);
+                ids[i] = jo.getString(KEY_ID);
+                names[i] = jo.getString(KEY_NAME);
+                emails[i] = jo.getString(KEY_EMAIL);
+            }*/
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
+}

@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
 
 /**
  * Created by Tiger on 05-10-2016.
@@ -310,6 +309,45 @@ public class DatabaseService {
             cursor.moveToFirst();
 
         // HINT : RETURN STATUS.
+        return cursor.getString(0);
+    }
+
+    //Fetch my Groups using only a mobile no passed to it.
+    public static GroupClass[] getMyGroups(String Mob_no){
+        String ids,names;
+        GroupClass[] result;
+        final SQLiteDatabase db =open();
+        Cursor cursor =db.rawQuery("select " + GROUP_NAME + " from "+ TABLE_GROUP + " where " + GROUP_ID +
+                " = ( select " + GROUPMAP_GID  + " from " + TABLE_GROUPMAP + " where " + GROUPMAP_GID +
+                " = ( select " + USERPROFILE_ID +  " from " + TABLE_USERPROFILE + " where " + USERPROFILE_MOBILE_NO + " = ?));",
+                new String[]{Mob_no});
+        int length = cursor.getCount();
+
+        result = new GroupClass[length];
+        cursor.moveToFirst();
+
+        for(int i=0;i<length;i++)
+        {
+            ids = cursor.getString(0);
+            names = cursor.getString(1);
+            result[i] = new GroupClass(ids,names);
+            cursor.moveToNext();
+        }
+        return result;
+    }
+
+    public static String fetchgidbygname(String gname){
+        final SQLiteDatabase db = open();
+
+        Cursor cursor = db.query(TABLE_GROUP,
+                new String[]{GROUPMAP_GID},
+                GROUP_NAME + "=?",
+                new String[]{gname},
+                null, null, null, null);
+
+        if (cursor != null)
+            cursor.moveToFirst();
+
         return cursor.getString(0);
     }
 

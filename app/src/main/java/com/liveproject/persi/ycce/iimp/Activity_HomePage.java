@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class Activity_HomePage extends AppCompatActivity {
 
-    Button user_profile, search_members,fetch_profile;
+    Button user_profile, search_members,fetch_profile,my_groups;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class Activity_HomePage extends AppCompatActivity {
         user_profile =(Button)findViewById(R.id.btn_userprofile);
         search_members=(Button)findViewById(R.id.btn_searchmember);
         fetch_profile = (Button) findViewById(R.id.btn_fetchprofile);
+        my_groups = (Button) findViewById(R.id.btn_mygroups);
 
 
         user_profile.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +42,15 @@ public class Activity_HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent("com.liveproject.persi.ycce.iimp.FETCH_PROFILE");
+                startActivity(i);
+            }
+        });
+
+        my_groups.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Add the groups activity intent here.
+                Intent i = new Intent("com.liveproject.persi.ycce.iimp.MY_GROUPS");
                 startActivity(i);
             }
         });
