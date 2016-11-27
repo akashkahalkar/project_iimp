@@ -72,9 +72,9 @@ public class Activity_GroupMembers extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String sendString = ((TextView) view.findViewWithTag("id")).getText().toString();
+                String sendString = ((TextView) view.findViewWithTag("name")).getText().toString();
                 Intent i = new Intent(getApplicationContext(), Activity_FetchProfile.class);
-                i.putExtra("string", sendString);
+                i.putExtra("name", sendString);
                 startActivity(i);
             }
         });

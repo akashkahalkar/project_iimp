@@ -23,7 +23,6 @@ public class Activity_OTP_Verification extends AppCompatActivity {
 
     Button btn_verify;
     EditText et_otp;
-
     String mobileno, otp, URL;
 
     @Override
@@ -42,7 +41,7 @@ public class Activity_OTP_Verification extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                otp = et_otp.getText().toString();
+                    otp = et_otp.getText().toString();
 
                 //HINT : VALDIATE OTP.
                 if (otp.isEmpty())
@@ -56,7 +55,6 @@ public class Activity_OTP_Verification extends AppCompatActivity {
 
                     VolleySingleton volleySingleton = VolleySingleton.getInstance();
                     RequestQueue requestQueue = volleySingleton.getRequestQueue();
-
                     StringRequest stringRequest = new StringRequest(Request.Method.GET,
                             URL,
                             new Response.Listener<String>() {
